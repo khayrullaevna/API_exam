@@ -1,0 +1,118 @@
+@mixin card-flex(){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.simple{
+    padding: 60px 165px;
+    background: #EDF3F8;
+    margin: 0 auto;
+
+    &__class{
+        @include card-flex();
+        gap: 71px;
+    }
+
+    &__images{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        // padding-right: -100px;
+    }
+
+    &__img{
+        margin: 0 auto;
+        padding: 0;
+        width: 257.649px;
+    }
+
+    &__title{
+        width: 445px;
+        color: #36536B;
+        font-family: "DM Serif Display";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 56px;
+    }
+
+    &__text{
+        margin-top: 24px;
+        width: 445px;
+        color: #6C8294;
+        font-family: "Public Sans" serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+}
+
+
+
+@media only screen and (max-width:940px){
+    .simple{
+        padding: 100px 97px;
+
+        &__class{
+            flex-direction: column-reverse;
+            margin-top: -150px;
+        }
+
+        &__title{
+            margin-top: -70px;
+            width: 573px;
+            color: #36536B;
+            text-align: center;
+            font-family: "DM Serif Display";
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 56px; /* 116.667% */
+            letter-spacing: -0.369px;
+        }
+
+        &__text{
+            width: 573px;
+            color: #6C8294;
+            text-align: center;
+            font-family: "Public Sans" serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px; /* 186.667% */
+        }
+    }
+}
+
+@media only screen and (max-width:690px){
+    .simple{
+        padding: 80px 25px;
+        margin: 0 auto;
+
+        &__title{
+            width: 327px;
+            color: #36536B;
+            text-align: center;
+            font-family: "DM Serif Display";
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px; /* 100% */
+            letter-spacing: -0.277px;
+        }
+
+        &__text{
+            width: 328px;
+            color: #6C8294;
+            text-align: center;
+            font-family: "Public Sans" serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px; 
+        }
+    }
+}

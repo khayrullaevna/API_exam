@@ -1,0 +1,131 @@
+@mixin card-flex(){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circle1{
+    position: absolute;
+    top: -250px;
+    left: 900px;
+    z-index: 5;
+    width: 780px;
+    height: 780px;
+    border-radius: 780px;
+    background: #36536B;
+    opacity: 20%;
+}
+
+.circle2{
+    position: absolute;
+    top: 250px;
+    left: -200px;
+    z-index: 1;
+    width: 780px;
+    height: 780px;
+    border-radius: 780px;
+    background: #36536B;
+    opacity: 20%;
+}
+
+.circle3{
+    position: absolute;
+    top: 1500px;
+    left: 1100px;;
+    width: 780px;
+    height: 780px;
+    border-radius: 780px;
+    background: #36536B;
+    opacity: 20%;
+}
+
+.circle4{
+    position: absolute;
+    top: 2500px;
+    left: 1100px;;
+    width: 780px;
+    height: 780px;
+    border-radius: 780px;
+    background: #36536B;
+    opacity: 20%;
+}
+
+@media only screen and (max-width:940px){
+    .circle1{
+        position: absolute;
+        top: -600px;
+        left: -90px;
+        z-index: 5;
+        width: 949px;
+        height: 949px;
+        border-radius: 949px;
+        background: #36536B;
+        opacity: 20%;
+    }
+
+    .circle2{
+        display: none;
+    }
+    
+    .circle3{
+        position: absolute;
+        left: 50px;;
+        top: 250px;
+        width: 780px;
+        height: 780px;
+        border-radius: 780px;
+        z-index: 2;
+        background: #36536B;
+        opacity: 20%;
+    }
+    
+    .circle4{
+        position: absolute;
+        top: 3200px;
+        left: 370px;
+        width: 780px;
+        height: 780px;
+        border-radius: 780px;
+        background: #36536B;
+        opacity: 20%;
+    }
+}
+
+@media only screen and (max-width:690px){
+    .circle1{
+        position: absolute;
+        top: -550px;
+        left: -67px;
+        width: 780px;
+        height: 780px;
+        border-radius: 780px;
+        background: #36536B;
+        opacity: 20%;
+    }
+
+    .circle2{
+        display: none;
+    }
+    
+    .circle3{
+        position: absolute;
+        top: 200px;
+        left: -67px;;
+        width: 780px;
+        height: 780px;
+        border-radius: 780px;
+        background: #36536B;
+        opacity: 20%;
+    }
+    
+    .circle4{
+        position: absolute;
+        top: 4210px;
+        left: -67px;;
+        width: 780px;
+        height: 780px;
+        border-radius: 780px;
+        background: #36536B;
+        opacity: 20%;
+    }
+}

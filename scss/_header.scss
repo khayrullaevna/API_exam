@@ -1,0 +1,100 @@
+@mixin card-flex(){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header{
+    padding: 40px 165px;
+    background: #EDF3F8;
+    margin: 0 auto;
+    // max-width: 1440px;
+
+    &__class{
+        @include card-flex();
+    }
+
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__lists{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        list-style: none;
+    }
+
+    &__list{
+        color: #36536B;
+        font-family: "Public Sans" serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        opacity: 0.699999988079071;
+    }
+
+    &__toggle{
+        display: none;
+    }
+}
+
+.demo__btn{
+    width: 173px;
+    height: 48px;
+    border: 0;
+    border-radius: 24px;
+    background: #BA4270;
+    color: #FBFCFE;
+    font-family: "Public Sans" serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.115px;
+    position: relative;
+}
+
+.demo__btn:active{
+    background: #DA6D97;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width:940px){
+    .header{
+        padding: 40px;
+        position: relative;
+        // z-index: 5;
+
+        &__toggle{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width:690px){
+    .header{
+        padding: 40px 24px;
+
+        &__button{
+            display: none;
+        }
+
+        &__lists{
+            display: none;
+        }
+
+        &__toggle{
+            display: block;
+        }
+    }
+}

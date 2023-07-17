@@ -1,0 +1,163 @@
+@mixin card-flex(){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero{
+    background: #EDF3F8;
+    padding: 0 165px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    // max-width: 1440px;
+
+    &__class{
+        @include card-flex();
+    }
+
+    &__img{
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title{
+        width: 546px;
+        height: 243px;
+        color: #36536B;
+        font-family: "DM Serif Display";
+        font-size: 72px;
+        font-style: normal;
+        line-height: 72px; /* 100% */
+        letter-spacing: -0.554px;
+    }
+
+    &__text{
+        margin-top: 16px;
+    }
+
+    &__form{
+        width: 445px;
+        height: 48px;
+        border-radius: 24px;
+        background: #FBFCFE;
+    }
+
+    &__btn{
+        margin-left: 107px;
+    }
+
+    &__email{
+        border-radius: 24px;
+        height: 48px;
+        text-align: center;
+        border: 0;
+        color: #36536B;
+        font-family: "Public Sans" serif;
+        font-size: 15px;
+        font-style: normal;
+        // font-weight: 700;
+        line-height: normal;
+    }
+
+    &__text{
+        margin-left: 18px;
+        color: #6C8294;
+        font-family: "Public Sans" serif;
+        font-size: 15px;
+        font-style: normal;
+        // font-weight: 400;
+        line-height: normal;
+    }
+}
+
+@media only screen and (max-width:940px){
+    .hero{
+        padding: 0px 24px;
+        position: relative;
+        z-index: 3;
+
+        &__class{
+            flex-direction: column-reverse;
+            margin-top: 0;
+        }
+
+        &__title{
+            width: 573px;
+            height: 122px;
+            flex-shrink: 0;
+            color: #36536B;
+            text-align: center;
+            font-family: "DM Serif Display";
+            font-size: 48px;
+            font-style: normal;
+            // font-weight: 400;
+            line-height: 56px; /* 116.667% */
+            letter-spacing: -0.369px;
+        }
+
+        &__form{
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        &__text{
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        &__img{
+            width: 156px;
+            height: 300px;
+        }
+    }
+}
+
+@media only screen and (max-width:690px){
+    .hero{
+        padding: 0px 24px;
+
+        &__class{
+            flex-direction: column-reverse;
+            margin-top: 0;
+        }
+
+        &__title{
+            margin: 0 auto;
+            width: 327px;
+            color: #36536B;
+            text-align: center;
+            font-family: "DM Serif Display";
+            font-size: 32px;
+            font-style: normal;
+            // font-weight: 400;
+            line-height: 36px; /* 112.5% */
+            letter-spacing: -0.246px;
+        }
+
+        &__form{
+            margin: 0 auto;
+            margin-top: 0px;
+            display: flex;
+            flex-direction: column;
+            width: 327px;
+        }
+
+        &__btn{
+            margin-top: 16px;
+            margin-left: 0;
+            width: 327px;
+        }
+
+        &__text{
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        &__img{
+            width: 127px;
+            height: 239px;
+        }
+    }
+}
+

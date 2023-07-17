@@ -1,0 +1,35 @@
+@import "./scss/header";
+@import "./scss/hero";
+@import "./scss/work";
+@import "./scss/implement";
+@import "./scss/simple";
+@import "./scss/finance";
+@import "./scss/ready";
+@import "./scss/footer";
+@import "./scss/circle";
+
+.container{
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1110px;
+}
+
+*{
+    margin: 0;
+}
+
+@media only screen and (max-width:940px){
+    .container{
+        max-width: 690px; 
+    }
+}
+
+@media only screen and (max-width:690px){
+    .container{
+        max-width: 327px; 
+    }
+}
+
+@mixin card-mixin(){
+    background: #1B262F;
+}

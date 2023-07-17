@@ -1,0 +1,74 @@
+@mixin card-flex(){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ready{ 
+    position: relative;
+    padding: 80px 165px;
+    background: #EDF3F8;
+    margin: 0 auto;
+
+    &__class{
+        margin: 0 auto;
+        @include card-flex();
+    }
+
+    &__title{
+        margin-top: 0;
+        color: #36536B;
+        font-family: "DM Serif Display";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 56px; 
+        letter-spacing: -0.369px;
+    }
+
+    &__form{
+        width: 445px;
+        height: 48px;
+        border-radius: 24px;
+        background: #FBFCFE;
+    }
+
+    &__email{
+        text-align: center;
+        border: 0;
+        color: #36536B;
+        font-family: "Public Sans" serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+
+@media only screen and (max-width:940px){
+    .ready{
+        &__class{
+            flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (max-width:690px){
+    .ready{
+        padding: 80px 24px 150px;
+
+        &__title{
+            margin-bottom: 30px;
+            width: 328px;
+            color: #36536B;
+            text-align: center;
+            font-family: "DM Serif Display";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px; /* 112.5% */
+            letter-spacing: -0.246px;
+        }
+    }
+}

@@ -1,0 +1,144 @@
+@mixin card-mixin(){
+    background: #1B262F;
+}
+
+@mixin card-flex(){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.work{
+    padding: 100px 165px;
+    @include card-mixin();
+    margin: 0 auto;
+
+    &__class{
+        @include card-flex();
+    }
+
+    &__title{
+        width: 445px;
+        color: #FBFCFE;
+        font-family: "DM Serif Display";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 56px; /* 116.667% */
+        letter-spacing: -0.369px;
+    }
+
+    &__text{
+        margin-top: 24px;
+        width: 445px;
+        color: #FBFCFE;
+        font-family: "Public Sans" serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 186.667% */
+    }
+
+    &__btn{
+        margin-top: 32px;
+        width: 129px;
+        height: 48px;
+        border-radius: 24px;
+        background-color: #36536B;
+        border: 1px solid #FBFCFE;
+        color: #FBFCFE;
+        text-align: center;
+        font-family: "Public Sans" serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.115px;
+    }
+
+    &__btn:active{
+        background-color: white;
+    }
+
+    &__group{
+        width: 536px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logos{
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+        align-items: end;
+        justify-content: space-between;
+    }
+}
+
+
+
+@media only screen and (max-width:940px){
+    .work{
+        padding: 95px 116px;
+
+        &__class{
+            flex-direction: column-reverse;
+            margin-top: 0;
+            gap: 65px;
+        }
+
+        &__title{
+            text-align: center;
+        }
+
+        &__text{
+            text-align: center;
+        }
+
+        &__btn{
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 32px;
+            background: #1B262F;
+            display: flex;
+            padding: 12px 32px;
+        }
+    }
+}
+
+@media only screen and (max-width:690px){
+    .work{
+        padding: 85px 50px;
+
+        &__group{
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        &__title{
+            width: 327px;
+            color: #FBFCFE;
+            text-align: center;
+            font-family: "DM Serif Display";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px; /* 112.5% */
+            letter-spacing: -0.246px;
+        }
+
+        &__text{
+            width: 327px;
+            color: #FBFCFE;
+            text-align: center;
+            font-family: "Public Sans" serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px; /* 186.667% */
+            opacity: 0.699999988079071;
+        }
+    }
+}
+
